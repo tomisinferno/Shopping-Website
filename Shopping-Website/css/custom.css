@@ -1,0 +1,359 @@
+/*
+##################################################
+Author - Oluwatomi
+Purpose - Custom CSS page overriding some bootstrap styling & personal styling
+Instructor - Joey Kitson
+Dependencies - Yes
+References - www.w3schools.com & www.codepen.io
+Website inspired from https://www.filippovezzali.com/en/
+Since - 27/11/2020
+##################################################
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap'); /*Font imported*/
+
+* {
+    margin: 0;
+!important;
+    font-family: 'Montserrat', sans-serif; /*Font used on website*/
+!important;
+}
+
+.navbar-default {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+!important border-radius: 0; /*Removes Navbar border radius, used on every page*/
+    border-color: transparent; /*Removes Navbar color, used on every page*/
+    background: transparent; /*Removes Navbar color, used on every page*/
+    box-shadow: none; /*Removes Background Highlights, used on every page*/
+}
+
+.activeCustom {
+    text-decoration: line-through;
+}
+
+.warningRibbon {
+    background-color: #2B547E;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.customHover {
+    position: relative;
+}
+
+/*Borrowed from w3schools.com (Beginning)*/
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: cornflowerblue;
+}
+
+.customHover:hover .overlay {
+    opacity: 0.5;
+}
+
+.hoverText {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*Borrowed from w3schools.com (End)*/
+.nav.navbar-nav.navbar-right li a {
+    color: #d6d4d4;
+!important; /*Font color of navbar contents , used on every page*/
+    font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: cornflowerblue;
+    !important; /*Background color of navbar dropdown on small screens , used on every page*/
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: cornflowerblue;
+    !important; /*Background color of navbar on small screens, used on every page*/
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+.navbar-nav li .dropdown-menu {
+    background-color: cornflowerblue;
+!important; /*Background color of navbar dropdown, used on every page*/
+}
+
+.dropdown-menu > li > a:hover {
+    background-image: none;
+    background-color: transparent;
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: right;
+        vertical-align: top;
+    !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .customCarousel {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .customCarousel {
+        height: 200px;
+    }
+}
+
+#introParagraph {
+    position: relative;
+}
+
+.col-md-3 {
+    padding: 0;
+!important;
+}
+
+.jumbotron {
+    text-align: center;
+!important; /*Text Aligned to center, used on every page*/
+    margin: 0;
+    background-color: cornflowerblue;
+!important; /*Background color for jumbotron, used on every page*/
+    color: white;
+!important; /*Text color for jumbotron, used on every page */
+
+}
+
+.customJumbotron {
+    text-align: center;
+    margin: 0;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0;
+}
+
+.customJumbotron2 {
+    text-align: center;
+    margin: auto;
+    background-color: #bbbcbc;
+    color: #ffffff;
+    padding: 30px;
+}
+
+footer {
+    background-color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+footer p {
+    font-size: x-large;
+    margin: 20px;
+}
+
+@media (min-width: 768px) {
+    .customSeperator {
+        font-size: 20px;
+        border-right: 1px solid #1c1e20;
+        border-left: 1px solid #1c1e20;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .customSeperator {
+        display: block;
+        margin: 5px;
+    }
+}
+
+footer img {
+    margin: 35px 10px; /*Borrowed from w3schools.com (Beginning)*/
+}
+
+a span {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+a span:before, span:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: #fff;
+}
+
+/*Borrowed from codepen.io (Beginning)*/
+a span:before {
+    left: -2.5px;
+}
+
+a span:after {
+    right: 2.5px;
+    background: #fff;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+a span:hover:before {
+    background: #fff;
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+a span:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+}
+
+/*Borrowed from codepen.io (End)*/
+#mapOuter {
+    position: relative;
+    text-align: right;
+    height: 1000px;
+    width: 100%;
+}
+
+#gmapCanvas {
+    overflow: hidden;
+    background: none !important;
+    height: 1000px;
+    width: 100%;
+}
+
+.contactHeader {
+    color: black;
+}
+
+#aboutUs {
+    font-size: xx-large;
+    margin: 0;
+    padding: 50px;
+    color: black;
+}
+
+#aboutUs2 {
+    font-size: xx-large;
+    background-color: #e8e9e9;
+    color: #333436;
+    margin: 0;
+    padding: 50px;
+}
+
+#aboutUs3 {
+    font-size: xx-large;
+    background-color: #bbbcbc;
+    color: #494b4d;
+    padding: 50px;
+}
+
+#aboutUs4 {
+    font-size: xx-large;
+    background-color: #8e8f90;
+    color: #494b4d;
+    padding: 50px;
+}
+
+#aboutUs5 {
+    font-size: xx-large;
+    background-color: #606263;
+    color: #bbbcbc;
+    padding: 50px;
+}
+
+#aboutUs6 {
+    font-size: xx-large;
+    background-color: #494b4d;
+    color: #e8e9e9;
+    padding: 50px;
+}
+
+#aboutUs7 {
+    font-size: xx-large;
+    background-color: #333436;
+    color: #ffffff;
+    padding: 50px;
+}
+
+.glyphicon {
+    top: 2px;
+!important;
+}
+
+.warningSymbol {
+    text-align: center;
+}
+
+table {
+    padding: 10px;
+    border-collapse: separate;
+    margin: auto;
+}
+
+td, th {
+    padding: 20px;
+    margin: 10px;
+}
+
+.tableRight {
+    text-align: right;
+}
+
+.container .finalExiting {
+    text-align: center;
+}
+
+.checkOutInfo {
+    text-align: center;
+}
+
+.productDisplay img {
+    padding: 15px;
+}
+
+.productDisplay {
+    text-align: center;
+}
+.divider-vertical{
+    border-right: solid 2px black;!important;
+}
